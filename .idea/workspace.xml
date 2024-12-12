@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1219cb9-8067-4398-8f94-5c23f546928b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Baraja.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Carta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Color.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Juego.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Jugador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Numero.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Palo.java" afterDir="false" />
-    </list>
+    <list default="true" id="a1219cb9-8067-4398-8f94-5c23f546928b" name="Changes" comment="version 0 12/12/24" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,11 +64,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734026311499</updated>
-      <workItem from="1734026312545" duration="1565000" />
+      <workItem from="1734026312545" duration="2061000" />
     </task>
+    <task id="LOCAL-00001" summary="version 0 12/12/24">
+      <option name="closed" value="true" />
+      <created>1734028365801</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1734028365801</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="version 0 12/12/24" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 0 12/12/24" />
   </component>
 </project>
