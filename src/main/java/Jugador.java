@@ -14,6 +14,8 @@ public class Jugador {
         this.nombre = nombre;
     }
 
+    public String getNombre(){ return nombre;}
+
     public void anyadirCarta(Carta carta){
        mano = Arrays.copyOf(mano,mano.length+1); //copia el array y le añade una posicion
        mano[mano.length-1] = carta; //en la posicion length-1 le añade la carta
@@ -35,7 +37,7 @@ public class Jugador {
     @Override
     public String toString(){
         //devolver nombre + mano
-        return "Jugador" + nombre + "puntuación:"+ obtenerPuntuacion()+
+        return "Jugador: " + nombre + " puntuación: "+ obtenerPuntuacion()+
                 " mano: " + Arrays.toString(mano);
     }
 }

@@ -25,10 +25,11 @@ public class Baraja {
 
     }
     public Carta repartirEncima(){
-        Carta carta = null;
+        Carta carta = null; //crea carta null y luego la carta null es la carta de la posicion 0 de la baraja
         if(cartas.length>0){
             carta = cartas[0];
             cartas = Arrays.copyOfRange(cartas,1,cartas.length);
+            //crea el mismo array y le quita la primera posicion y te devuelve la carta, haciendolo cada vez mas pequeño
         }
         return carta;
     }
