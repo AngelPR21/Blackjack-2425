@@ -22,17 +22,32 @@ public class Jugador {
     }
 
     public int obtenerPuntuacion(){
-        //contar a partir de las cartas de la mano y devolver la puntuacion
-        int puntos = 0;
-        for(Carta carta: mano){
-            puntos += carta.getNumero().getPuntuacion();
-        }
-//        if (puntos > 21){
-//            return -1;
-//
+//        //contar a partir de las cartas de la mano y devolver la puntuacion
+//        int puntos = 0;
+//        for(Carta carta: mano){
+//            puntos += carta.getNumero().getPuntuacion();
 //        }
-//        return puntos;
-        return(puntos>21)?-1:puntos;
+////        if (puntos > 21){
+////            return -1;
+////
+////        }
+////        return puntos;
+//        return(puntos>21)?-1:puntos;
+        return obtenerPuntuacionRecursiva(0,0);
+    }
+
+    public int obtenerPuntuacionRecursiva(int index, int suma){
+        if(suma>21)
+            return -1;
+        if(index>=mano.length)
+            return suma;
+        if(mano[index].getNumero().getPuntuacion().length==1)
+            return obtenerPuntuacionRecursiva(index+1,suma+mano[index].getNumero().getPuntuacion()[0]);
+        return Math.max(
+             obtenerPuntuacionRecursiva(index+1,suma+mano[index].getNumero().getPuntuacion()[0]),
+             obtenerPuntuacionRecursiva(index+1,suma+mano[index].getNumero().getPuntuacion()[1])
+        );
+
     }
     @Override
     public String toString(){

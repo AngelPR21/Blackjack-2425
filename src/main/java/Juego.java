@@ -24,23 +24,13 @@ public class Juego {
             juegaJugador(jugador);
         }
         juegaBanca(banca);
-
+        mostrarGanador();
     }
     private void repartoInicial(Jugador player){
         player.anyadirCarta(baraja.repartirEncima());
         player.anyadirCarta(baraja.repartirEncima());
     }
-    private void juegaBanca(Jugador player){
-        int maxPuntuacion=maxPuntuacionJugadores();
-        System.out.println("Turno para " + player.getNombre());
-        System.out.println(player);
-        while(player.obtenerPuntuacion()<maxPuntuacion){
-            player.anyadirCarta(baraja.repartirEncima());
-            System.out.println(player);
-            if(player.obtenerPuntuacion()<0)
-                System.out.println(player.getNombre() + " te has pasado !!");
-        }
-    }
+
     private void juegaJugador(Jugador player){
         //repartir cartas mientras el jugador diga que si Y puntuacion sea -1
         System.out.println("Turno para " +player.getNombre());
@@ -61,4 +51,45 @@ public class Juego {
 
         }
     }
+    private void juegaBanca(Jugador player){
+        int maxPuntuacion=maxPuntuacionJugadores();
+        System.out.println("Turno para " + player.getNombre());
+        System.out.println(player);
+        while(player.obtenerPuntuacion()<maxPuntuacion){
+            player.anyadirCarta(baraja.repartirEncima());
+            System.out.println(player);
+            if(player.obtenerPuntuacion()<0)
+                System.out.println(player.getNombre() + " te has pasado !!");
+        }
+    }
+    private void esperar(long millis){
+        try{
+            Thread.sleep(millis);
+        } catch (Exception e){
+
+        }
+    }
+
+    private int maxPuntuacionJugadores(){
+        int mayor = Integer.MIN_VALUE;
+        for(Jugador jugador:jugadores){
+            if(jugador.obtenerPuntuacion()>mayor){
+                mayor = jugador.obtenerPuntuacion();
+            }
+        }
+        return mayor;
+    }
+
+    private void mostrarGanador(){
+        int maxPuntuacion = maxPuntuacionJugadores();
+        if(banca.obtenerPuntuacion() == maxPuntuacion){
+            System.out.println("La banca gana");
+        }else{
+            for(Jugador jugador:jugadores){
+                if(jugador.obtenerPuntuacion()==maxPuntuacion)
+                    System.out.println("Jugador" + jugador.getNombre() + " ha ganado");
+            }
+        }
+    }
+
 }
